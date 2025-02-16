@@ -24,7 +24,10 @@ Solution Using Bubble Sort (Using Java)
        for (i=0;i<n;i++){                                #this is for the sorted array
         System.out.println(arr[i]+" ")                    
       }
-      inputScanner.close()      # this makes the scanner class close . so  that no need of reading the inputs anymore .
+      inputScanner.close()   # this makes the scanner class close . so  that no need of reading the inputs anymore .
+      for (int i = Math.max(0, n - 3); i < n; i++) {                             # for obtaining the last three maximumm values .
+            System.out.println("Index " + i + ": " + arr[i]);
+        }
 
 
       public static void BubbleSort( int arr[]){            # takes integer array as input
