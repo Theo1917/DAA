@@ -1,0 +1,53 @@
+% Question
+Given an array of size N, find the K largest elements in the array where K<<<N. For Example: Input: 1, 23, 11, 8, 31, 4, 50, 60, 2, 70} K=3 
+Output = 70,60,50 
+
+Best Solution  is Using Min Heap .
+Solution Using Bubble Sort (Using Java)
+  java.util.Scanner;
+  public class Q1{
+    public static void main(String args[]){
+      Scanner inputScanner=new Scanner(System.in);
+      System.out.println("enter a array of size n");
+      int n =inputScanner.nextInt();                # used to read an integer and store it in variable n.  
+      int [] arr=new int [n];                        # this lines ensures exactly n elements are stored in the array
+      System.out.println("enter" + n + "elements");  # used to read the integer values and stores the variables in it 
+      for (i=0;i<n;i++){                              # used to get n integer inputs from the user.
+        arr[i]=inputScanner.nextInt();
+      }
+      System.out.println("Entered array is :")
+      for (i=0;i<n;i++){                                # the whole for loop gives the elements we have entered
+        System.out.println(arr[i]+" ")                    
+      }
+      BubbleSort(arr)
+      System.out.print("Sortd array is")
+       for (i=0;i<n;i++){                                #this is for the sorted array
+        System.out.println(arr[i]+" ")                    
+      }
+      inputScanner.close()      # this makes the scanner class close . so  that no need of reading the inputs anymore .
+
+
+      public static void BubbleSort( int arr[]){            # takes integer array as input
+      int n =arr.length;
+      boolean swapped;
+      for (i=0;i<n-1;i++){
+        swapped=false;
+        for (j=0;j<n-1-i;j++){
+          if (arr[j]>arr[j+1]){
+            int temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=int temp;
+            swappped=true;
+          }
+        }
+          if(!swapped){
+            break;
+          }
+      }
+      }         
+    
+
+    
+      
+
+      
